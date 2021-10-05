@@ -1,4 +1,4 @@
-.navBar {
+#navBar {
   height: 120px;
   width: 100vw;
   background-color: #4056A1;
@@ -16,21 +16,23 @@
 .container1 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+}
+
+.navItem {
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 .navSpan {
   margin-right: auto;
+  font-family: 'Bungee', cursive;
   font-size: 48px;
   align-self: flex-end;
 }
 
 .navSpan1 {
   font-size: 24px;
-}
-
-nav span {
-  font-family: 'Bungee', cursive;
+  font-weight: bold;
 }
 
 .fontAwesome {
