@@ -1,0 +1,57 @@
+.tweetContainer {
+  margin-top: 50px;
+  padding:10px;
+  border: 3px solid #545149;
+  margin-bottom: 20px;
+}
+
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  margin: 20px;
+}
+
+article.tweet header > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+article.tweet header > h2 {
+  align-self: flex-end;
+  color: #6c80c3;
+}
+
+.headerContainer h2 {
+  margin-left: 15px;
+}
+
+article.tweet .content {
+  margin-left: 20px; 
+}
+
+article > hr {
+  border-bottom: 3px solid #545149
+}
+
+article.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+article.tweet footer > p {
+  margin: 8px 0 10px 20px;
+}
+
+article.tweet footer > span {
+  margin: 5px 20px 10px 0; 
+}
+
+span > i {
+  margin: 5px;
+  color: #4056A1;
+}

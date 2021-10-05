@@ -1,9 +1,12 @@
 #navBar {
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
+  background-image: url("../images/profile-background.png");
+  background-color: rgb(220, 165, 26);
   color: #FFFFFF;
   padding: 0 1.5em;
+  position: absolute;
+  top: 0;
   z-index: 1000;
 }
 

@@ -19,14 +19,16 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/newTweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/composerCharCounter.js"></script>
+    <script type="text/javascript" src="/scripts/tweetHover.js"></script>
   </head>
 
   <body>
@@ -48,12 +50,12 @@
       </div>
       <br>
       <div class="headerName">
-        <h2><span class="headerSpan">Meghal</span> Shah</h2>
+        <h2><span class="headerSpan">Amy</span> Mansell</h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container2">
+    <main id="container2">
       <section class="newTweet">
         <form method="POST" action="/tweets/">
           <textarea name="text" id="tweetText" placeholder="What are you humming about?"></textarea>
@@ -62,6 +64,27 @@
             <output name="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="tweetContainer">
+        <article class="tweet">
+          <header>
+            <div class="headerContainer">
+              <img src="" alt="Picture"/>
+              <h2>Newton</h2>
+            </div>
+            <h2>@Sirlsaac</h2>
+          </header>
+          <p class="content">Content</p>
+          <hr/>
+          <footer>
+            <p>10 days ago</p>
+            <span>
+              <i class="fa fa-flag iHover1" aria-hidden="true"></i>
+              <i class="fa fa-retweet iHover2" aria-hidden="true"></i>
+              <i class="fa fa-heart iHover3" aria-hidden="true"></i>
+            </span>
+          </footer>
+        </article>
       </section>
     </main>
   </body>
