@@ -10,7 +10,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .container1 {
@@ -24,7 +24,6 @@
 }
 
 .navSpan {
-  margin-right: auto;
   font-family: 'Bungee', cursive;
   font-size: 48px;
   align-self: flex-end;
