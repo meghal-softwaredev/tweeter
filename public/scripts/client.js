@@ -1,10 +1,7 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
+//when page is loaded
 $(() => {
+
+//create single dynamic tweet using jQuery
 const createTweetElement = (tweet) => {
   const $avatars = $(`<img src=${tweet.user.avatars} alt="Image" width="50px" height="50px" />`);
   const $name = $('<h2>').text(tweet.user.name);
@@ -31,14 +28,27 @@ const createTweetElement = (tweet) => {
   return $tweet.append($header, $content, $hr, $footer);
 };
 
+//display all tweets
 const renderTweets = (tweets) => {
+  //Empty tweet container
   const $tweetContainer = $("#tweet-container").empty();
 
-    for (const tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      $tweetContainer.prepend($tweet);
-    }
+  //repopulate tweet container
+  for (const tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
+    $tweetContainer.prepend($tweet);
+  }
 };
+
+$("#new-tweet-form").on("submit", (event) => {
+    event.preventDefault();
+    const serializedData = $("#new-tweet-form").serialize();
+
+    $.post("/tweets/", serializedData, (response) => {
+      console.log(response);
+      renderTweets(data);
+    })
+  })
 
 const data = [
   {
@@ -64,5 +74,4 @@ const data = [
   }
 ]
 
-renderTweets(data);
 });
