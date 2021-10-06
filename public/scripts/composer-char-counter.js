@@ -1,7 +1,7 @@
 $(() => {
-  $('#tweetText').on('keyup', () => {
-    let tweetLength = $('#tweetText').val().length;
-    let leftSpace = 140 - tweetLength;
+  $('#tweet-text').on('keyup', () => {
+    const tweetLength = $('#tweet-text').val().length;
+    const leftSpace = 140 - tweetLength;
     if (leftSpace < 0) {
       $('#counter').css({color: 'red'});
     } else {

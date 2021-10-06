@@ -1,4 +1,4 @@
-.tweetContainer {
+#tweet-container {
   margin-top: 50px;
   padding:10px;
   border: 3px solid #545149;
@@ -10,7 +10,7 @@ article.tweet header {
   flex-direction: row;
   justify-content: space-between;
   font-size: 16px;
-  margin: 20px;
+  margin: 10px;
 }
 
 article.tweet header > div {
@@ -20,19 +20,20 @@ article.tweet header > div {
 }
 
 article.tweet header > h2 {
+  margin: 10px;
   align-self: flex-end;
   color: #6c80c3;
 }
 
-.headerContainer h2 {
-  margin-left: 15px;
+.header-container > h2 {
+  margin: 10px 0 0 15px;
 }
 
 article.tweet .content {
-  margin-left: 20px; 
+  margin: 50px 0 0 20px; 
 }
 
-article > hr {
+article.tweet > hr {
   border-bottom: 3px solid #545149
 }
 

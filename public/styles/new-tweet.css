@@ -1,28 +1,27 @@
-.newTweet textarea {
+#tweet-text {
   width: 100%;
-  height: 35px;
+  height: 50px;
   margin-top: 40px;
   padding: 0;
   border: transparent;
-  font-weight: bold;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 20px;
   background-color: #f4f1ec;
   border-bottom: 3px solid #545149;
 }
 
-.newTweet textarea:focus {
+#tweet-text:focus {
   outline: none;
 }
 
-.container3 {
-  display: flex;
-  flex-direction: row;
+.btn-counter {
   margin-top: 10px;
-  justify-content: space-between;
   font-family: 'Bungee', cursive;
   font-size: 18px;
 }
-.container3 button {
+
+#tweet-btn {
   background-color: #4056A1;
   color: #FFFFFF;
+  border-radius: 0.5px;
 }

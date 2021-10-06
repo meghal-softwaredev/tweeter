@@ -1,11 +1,9 @@
-#navBar {
+#nav-bar {
   height: 120px;
   width: 100vw;
-  background-image: url("../images/profile-background.png");
-  background-color: rgb(220, 165, 26);
   color: #FFFFFF;
   padding: 0 1.5em;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1000;
 }
@@ -16,28 +14,41 @@
   justify-content: space-between;
 }
 
-.container1 {
+.inner-container {
   display: flex;
   flex-direction: column;
 }
 
-.navItem {
+#logo {
+  font-family: 'Bungee', cursive;
+  font-size: 32px;
+  align-self: flex-end;
+}
+
+.nav-item {
+  text-align: center;
   margin-top: 50px;
   margin-bottom: 0;
 }
 
-.navSpan {
-  font-family: 'Bungee', cursive;
-  font-size: 48px;
-  align-self: flex-end;
+.bold-font {
+  font-weight: 600;
 }
 
-.navSpan1 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.fontAwesome {
+#double-arrow {
+  animation: MoveUpDown 2s ease infinite;
   align-self: center;
+  position: absolute;
+  bottom: 20px;
+  font-size: 16px;
   color: red;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 30px;
+  }
 }

@@ -1,27 +1,24 @@
-#header {
+#header-tweet {
   height: 400px;
   background-image: url("../images/profile-background.png");
   background-color: rgb(220, 165, 26);
-  position: relative;
-  margin-top: 120px;
+  color: #FFFFFF;
 }
 
-.headerImage {
+.header-image {
+  padding-top: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.headerName {
+.header-name {
+  
   text-align: center;
   color: white;
 }
 
-h2 {
+.header-name h2 {
   margin: 0;
   font-weight: lighter;
-}
-
-.headerSpan {
-  font-weight: bold;
 }
