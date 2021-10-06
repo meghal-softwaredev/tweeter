@@ -1,8 +1,8 @@
 $(() => {
-  $("#tweet-container").hover(() => {
-    $('#tweet-container').css('box-shadow', '5px 5px 0px #6c80c3');
+  $(".tweet").hover(() => {
+    $('.tweet').css('box-shadow', '5px 5px 0px #6c80c3');
     }, () => {
-    $('#tweet-container').css('box-shadow', 'none');
+    $('.tweet').css('box-shadow', 'none');
   });
 
   $('.iHover1').hover(() => {

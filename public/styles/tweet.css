@@ -1,7 +1,12 @@
 #tweet-container {
   margin-top: 50px;
   padding:10px;
+  margin-bottom: 20px;
+}
+
+article.tweet {
   border: 3px solid #545149;
+  border-radius: 0.5px;
   margin-bottom: 20px;
 }
 
