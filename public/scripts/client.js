@@ -54,9 +54,16 @@ loadtweets();
 //When form is submitted, serialized the data and make a post request to create tweet and then load tweets
 $("#new-tweet-form").on("submit", (event) => {
     event.preventDefault();
-    const serializedData = $("#new-tweet-form").serialize();
-    $.post("/tweets/", serializedData, (response) => {
-    loadtweets();
-    });
+    const input = $('#tweet-text');
+    if (!input.val()) {
+      alert("Error: Input is empty!");
+    } else if (input.val().length > 140) {
+      alert("Error: Exceeded character Limit");
+    } else {
+      const serializedData = $("#new-tweet-form").serialize();
+      $.post("/tweets/", serializedData, (response) => {
+      loadtweets();
+      });
+    }
   });
 });
