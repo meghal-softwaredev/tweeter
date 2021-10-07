@@ -6,8 +6,10 @@
   border: transparent;
   font-weight: 600;
   font-size: 20px;
-  background-color: #f4f1ec;
   border-bottom: 3px solid #545149;
+  background-color: transparent;
+  resize: none;
+  outline: none;
 }
 
 #tweet-text:focus {
@@ -25,3 +27,4 @@
   color: #FFFFFF;
   border-radius: 0.5px;
 }
+
