@@ -28,3 +28,12 @@
   border-radius: 0.5px;
 }
 
+.error-container {
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  color: red;
+  border: solid 5px red;
+}
+

@@ -1,8 +1,8 @@
 //when page is loaded
 $(() => {
-
-//create single dynamic tweet using jQuery
-const createTweetElement = (tweet) => {
+  $('#error').hide();
+  //create single dynamic tweet using jQuery
+  const createTweetElement = (tweet) => {
   const $avatars = $(`<img src=${tweet.user.avatars} alt="Image" width="50px" height="50px" />`);
   const $name = $('<h2>').text(tweet.user.name);
   const $headerContainer = $('<div>').addClass('header-container');
@@ -56,10 +56,15 @@ $("#new-tweet-form").on("submit", (event) => {
     event.preventDefault();
     const input = $('#tweet-text');
     if (!input.val()) {
-      alert("Error: Input is empty!");
+      $('.error-container').show().slideDown('slow', () => {
+        $('.error-message').text('Error: Input is empty!');
+      });
     } else if (input.val().length > 140) {
-      alert("Error: Exceeded character Limit");
+      $('.error-container').show().slideDown('slow', () => {
+        $('.error-message').text('Error: Exceeded character Limit');
+      });
     } else {
+      $('.error-container').slideUp();
       const serializedData = $("#new-tweet-form").serialize();
       $.post("/tweets/", serializedData, (response) => {
       loadtweets();

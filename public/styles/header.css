@@ -3,6 +3,9 @@
   background-image: url("../images/profile-background.png");
   background-color: rgb(220, 165, 26);
   color: #FFFFFF;
+  /* width: 100%;
+  position: fixed;
+  z-index: 100; */
 }
 
 .header-image {
