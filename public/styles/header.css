@@ -5,9 +5,6 @@
   background-image: url("../images/profile-background.png");
   background-color: rgb(220, 165, 26);
   color: #FFFFFF;
-  position: fixed;
-  z-index: 100;
-  overflow: hidden;
 }
 /* header image */
 .header-image {
