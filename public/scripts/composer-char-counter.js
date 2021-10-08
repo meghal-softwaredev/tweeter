@@ -1,3 +1,4 @@
+//keeps track of length of input
 $(() => {
   $('#tweet-text').on('keyup', () => {
     const tweetLength = $('#tweet-text').val().length;

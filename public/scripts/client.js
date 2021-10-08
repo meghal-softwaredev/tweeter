@@ -3,19 +3,21 @@ $(() => {
   $('#error').hide();
   //create single dynamic tweet using jQuery
   const createTweetElement = (tweet) => {
+  // create tags dynamically and insert pulled data from backend
   const $avatars = $(`<img src=${tweet.user.avatars} alt="Image" width="50px" height="50px" />`);
   const $name = $('<h2>').text(tweet.user.name);
   const $headerContainer = $('<div>').addClass('header-container');
+  //append tags to div container
   $headerContainer.append($avatars, $name);
   
   const $handle = $('<h2>').text(tweet.user.handle);
   const $header = $('<header>').append($headerContainer, $handle);
-  
+  //add class to p tag
   const $content = $('<p>').addClass('content');
   $content.text(tweet.content.text);
 
   const $hr = $('<hr>');
-  
+  //use timeago js to format date
   const $createdAt = $('<p>').text(timeago.format(tweet['created_at']));
 
   const $fontAwesome = $('<span>').addClass('font-awesome');
@@ -27,6 +29,7 @@ $(() => {
   const $footer = $('<footer>').append($createdAt, $fontAwesome);
   
   const $tweet = $('<article>').addClass('tweet');
+  //add header, content, hr and footer to tweet article
   return $tweet.append($header, $content, $hr, $footer);
 };
 
@@ -55,6 +58,7 @@ loadtweets();
 $("#new-tweet-form").on("submit", (event) => {
     event.preventDefault();
     const input = $('#tweet-text');
+    //checks for validation when input is empty, length >140
     if (!input.val()) {
       $('.error-container').show().slideDown('slow', () => {
         $('.error-message').text('Error: Input is empty!');
@@ -63,10 +67,11 @@ $("#new-tweet-form").on("submit", (event) => {
       $('.error-container').show().slideDown('slow', () => {
         $('.error-message').text('Error: Exceeded character Limit');
       });
-    } else {
+    } else { 
       $('.error-container').slideUp();
       const serializedData = $("#new-tweet-form").serialize();
-      $.post("/tweets/", serializedData, (response) => {
+      //make a post request to create tweet
+      $.post("/tweets/", serializedData, () => {
       loadtweets();
       });
       $('#tweet-text').val('');
