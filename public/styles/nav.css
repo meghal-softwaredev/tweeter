@@ -14,7 +14,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-/* container for nav items and compose button */
+/* container for nav items */
 .inner-container {
   display: flex;
   flex-direction: column;
@@ -30,11 +30,13 @@
   text-align: center;
   margin-top: 50px;
   margin-bottom: 0;
+  color: white;
+  text-decoration: none;
 }
 .bold-font {
   font-weight: 600;
 }
-/* compose button */
+/* double arrow */
 #double-arrow {
   animation: MoveUpDown 2s ease infinite;
   align-self: center;
@@ -43,7 +45,7 @@
   font-size: 16px;
   color: red;
 }
-/* animation of compose button */
+/* animation of double arrow */
 @keyframes MoveUpDown {
   0%, 100% {
     bottom: 20px;

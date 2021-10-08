@@ -54,6 +54,12 @@ const loadtweets = () => {
 
 loadtweets();
 
+//form toggle 
+$('.nav-item').on('click',() => {
+  $('.new-tweet').slideToggle()
+  $('#tweet-text').focus()
+});
+
 //When form is submitted, serialized the data and make a post request to create tweet and then load tweets
 $("#new-tweet-form").on("submit", (event) => {
     event.preventDefault();
