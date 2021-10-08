@@ -39,4 +39,7 @@
   color: red;
   border: solid 5px red;
 }
+.error-message {
+  font-size: 20px;
+}
 

@@ -56,8 +56,8 @@ loadtweets();
 
 //form toggle 
 $('.nav-item').on('click',() => {
-  $('.new-tweet').slideToggle()
-  $('#tweet-text').focus()
+  $('.new-tweet').slideToggle();
+  $('#tweet-text').focus();
 });
 
 //When form is submitted, serialized the data and make a post request to create tweet and then load tweets
@@ -67,11 +67,11 @@ $("#new-tweet-form").on("submit", (event) => {
     //checks for validation when input is empty, length >140
     if (!input.val()) {
       $('.error-container').show().slideDown('slow', () => {
-        $('.error-message').text('Error: Input is empty!');
+        $('.error-message').text('Error: Input is empty! Enter valid input');
       });
     } else if (input.val().length > 140) {
       $('.error-container').show().slideDown('slow', () => {
-        $('.error-message').text('Error: Exceeded character Limit');
+        $('.error-message').text('Error: Exceeded character Limit. Please respect our limit of 140 chars');
       });
     } else { 
       $('.error-container').slideUp();
