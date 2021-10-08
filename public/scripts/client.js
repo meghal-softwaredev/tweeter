@@ -69,6 +69,8 @@ $("#new-tweet-form").on("submit", (event) => {
       $.post("/tweets/", serializedData, (response) => {
       loadtweets();
       });
+      $('#tweet-text').val('');
+      $('#counter').val(140);
     }
   });
 });

@@ -1,11 +1,12 @@
 #header-tweet {
   height: 400px;
+  width: 100%;
   background-image: url("../images/profile-background.png");
   background-color: rgb(220, 165, 26);
   color: #FFFFFF;
-  /* width: 100%;
   position: fixed;
-  z-index: 100; */
+  z-index: 100;
+  overflow: hidden;
 }
 
 .header-image {
@@ -16,7 +17,7 @@
 }
 
 .header-name {
-  
+  margin-top: 10px;
   text-align: center;
   color: white;
 }
