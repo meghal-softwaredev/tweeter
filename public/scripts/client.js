@@ -3,32 +3,32 @@ $(() => {
   $('#error').hide();
   //create single dynamic tweet using jQuery
   const createTweetElement = (tweet) => {
+
   // create tags dynamically and insert pulled data from backend
   const $avatars = $(`<img src=${tweet.user.avatars} alt="Image" width="50px" height="50px" />`);
   const $name = $('<h2>').text(tweet.user.name);
   const $headerContainer = $('<div>').addClass('header-container');
+
   //append tags to div container
   $headerContainer.append($avatars, $name);
-  
   const $handle = $('<h2>').text(tweet.user.handle);
   const $header = $('<header>').append($headerContainer, $handle);
+
   //add class to p tag
   const $content = $('<p>').addClass('content');
   $content.text(tweet.content.text);
-
   const $hr = $('<hr>');
+
   //use timeago js to format date
   const $createdAt = $('<p>').text(timeago.format(tweet['created_at']));
-
   const $fontAwesome = $('<span>').addClass('font-awesome');
-
   const $faFlag = $('<i>').addClass("fa fa-flag");
   const $faRetweet = $('<i>').addClass("fa fa-retweet");
   const $faHeart = $('<i>').addClass("fa fa-heart");
   $fontAwesome.append($faFlag, $faRetweet, $faHeart);
   const $footer = $('<footer>').append($createdAt, $fontAwesome);
-  
   const $tweet = $('<article>').addClass('tweet');
+  
   //add header, content, hr and footer to tweet article
   return $tweet.append($header, $content, $hr, $footer);
 };

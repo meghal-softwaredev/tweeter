@@ -1,3 +1,4 @@
+/* nav bar */
 #nav-bar {
   height: 120px;
   width: 100vw;
@@ -7,34 +8,33 @@
   top: 0;
   z-index: 1000;
 }
-
+/* container - for all nav items */
 .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
+/* container for nav items and compose button */
 .inner-container {
   display: flex;
   flex-direction: column;
 }
-
+/* tweeter logo */
 #logo {
   font-family: 'Bungee', cursive;
   font-size: 32px;
   align-self: flex-end;
 }
-
+/* nav item  */
 .nav-item {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 0;
 }
-
 .bold-font {
   font-weight: 600;
 }
-
+/* compose button */
 #double-arrow {
   animation: MoveUpDown 2s ease infinite;
   align-self: center;
@@ -43,7 +43,7 @@
   font-size: 16px;
   color: red;
 }
-
+/* animation of compose button */
 @keyframes MoveUpDown {
   0%, 100% {
     bottom: 20px;

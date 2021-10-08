@@ -1,3 +1,4 @@
+/* header container */
 #header-tweet {
   height: 400px;
   width: 100%;
@@ -8,20 +9,19 @@
   z-index: 100;
   overflow: hidden;
 }
-
+/* header image */
 .header-image {
   padding-top: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/* header name - avatar */
 .header-name {
   margin-top: 10px;
   text-align: center;
   color: white;
 }
-
 .header-name h2 {
   margin: 0;
   font-weight: lighter;

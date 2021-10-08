@@ -1,9 +1,10 @@
+/* main container to create new tweets*/
 #main-container {
   width: 90%;
   margin: auto;
   padding-top: 400px;
 }
-
+/* tweet textarea */
 #tweet-text {
   width: 100%;
   height: 50px;
@@ -17,19 +18,19 @@
   resize: none;
   outline: none;
 }
-
+/* container for button and counter */
 .btn-counter {
   margin-top: 10px;
   font-family: 'Bungee', cursive;
   font-size: 18px;
 }
-
+/* button to create new tweet */
 #tweet-btn {
   background-color: #4056A1;
   color: #FFFFFF;
   border-radius: 0.5px;
 }
-
+/* error container */
 .error-container {
   margin: 10px 0;
   padding: 10px;
