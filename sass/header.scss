@@ -1,12 +1,13 @@
+@import "variables-mixins";
+
 /* header container */
 #header-tweet {
   height: 400px;
   width: 100%;
   background-image: url("../images/profile-background.png");
-  background-color: #dca51a;
-  color: #FFFFFF;
+  background-color: rgb(220, 165, 26);;
+  color: $color;
 }
-
 /* header image */
 .header-image {
   padding-top: 120px;
@@ -14,14 +15,14 @@
   justify-content: center;
   align-items: center;
 }
-
 /* header name - avatar */
 .header-name {
   margin-top: 10px;
   text-align: center;
-  color: #FFFFFF;
+  color: $color;
+  h2 {
+    margin: 0;
+    font-weight: lighter;
+  }
 }
-.header-name h2 {
-  margin: 0;
-  font-weight: lighter;
-}
+

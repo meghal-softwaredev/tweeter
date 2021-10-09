@@ -1,9 +1,10 @@
+@import "variables-mixins";
+
 /* tweet container to display tweets */
 #tweet-container {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-
 /* article to display tweet */
 .tweet {
   border: 3px solid #545149;
@@ -13,76 +14,68 @@
 
 /* box shadow when article is hover */
 .tweet:hover {
-  box-shadow: 5px 5px 0px #c0c7de;
+  box-shadow: 5px 5px 0px $color-grey;
 }
 
 /* tweet header - avatar, name, handle */
 .tweet header {
-  display: flex;
-  flex-direction: row;
+  @include flex;
   justify-content: space-between;
   font-size: 16px;
   margin: 10px;
 }
-
 /* handle */
 .tweet header > h2 {
   margin: 10px;
   font-size: 20px;
   align-self: flex-end;
-  color: #c0c7de;
+  color: $color-grey;
 }
-
 /* tweet container - avatar, name */
 .header-container {
-  display: flex;
-  flex-direction: row;
+  @include flex;
   justify-content: flex-start;
+  img {
+    margin: 5px 0 0 5px;
+  }
+  h2 {
+    padding-top: 10px;
+    font-size: 20px;
+    margin: 10px 0 0 15px;
+    font-weight: 300;
+  }
 }
-.header-container img {
-  margin: 5px 0 0 5px;
-}
-.header-container h2 {
-  padding-top: 10px;
-  font-size: 20px;
-  margin: 10px 0 0 15px;
-  font-weight: 300;
-}
-
 /* tweet content */
 .tweet .content {
   margin: 30px 0 0 20px;
-  font-weight: 300;
+  font-weight: 300; 
 }
-
 /* horizontal line */
 .tweet > hr {
   width: 97%;
-  border-bottom: 3px solid #545149;
+  border-bottom: 3px solid #545149
 }
-
 /* tweet footer - time and font-awesome */
 .tweet footer {
-  display: flex;
-  flex-direction: row;
+  @include flex;
   justify-content: space-between;
   font-size: 16px;
   margin-bottom: 3px;
+  p {
+    margin: 0 0 10px 20px;
+    font-weight: 600;
+    font-size: 15px;
+  }
 }
-.tweet footer p {
-  margin: 0 0 10px 20px;
-  font-weight: 600;
-  font-size: 15px;
-}
-
 /* font-awesome - flag, retweet, like */
 .font-awesome {
   margin: 0 20px 10px 0;
+  i {
+    margin: 5px;
+    color: #4056A1;
+  }
+  i:hover {
+    color:  #C2983B;
+  }
 }
-.font-awesome i {
-  margin: 5px;
-  color: #4056A1;
-}
-.font-awesome i:hover {
-  color: #C2983B;
-}
+

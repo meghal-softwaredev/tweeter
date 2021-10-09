@@ -1,46 +1,43 @@
+@import "variables-mixins";
+
 /* nav bar */
 #nav-bar {
   height: 120px;
   width: 100vw;
-  color: #FFFFFF;
+  color: $color;;
   padding: 0 1.5em;
   position: fixed;
   top: 0;
   z-index: 1000;
 }
-
 /* container - for all nav items */
 .container {
-  display: flex;
-  flex-direction: row;
+  @include flex;
   justify-content: space-between;
 }
-
 /* container for nav items */
 .inner-container {
-  display: flex;
-  flex-direction: column;
-}
-.inner-container .nav-item {
+  @include flex($flex-direction: column);
+  .nav-item {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 0;
   padding: 5px;
-  color: #FFFFFF;
+  color: $color;
   text-decoration: none;
+  }
+  #double-arrow {
+    animation: MoveUpDown 2s ease infinite;
+    align-self: center;
+    position: absolute;
+    bottom: 20px;
+    font-size: 16px;
+    color: red;
+  }
 }
-.inner-container #double-arrow {
-  animation: MoveUpDown 2s ease infinite;
-  align-self: center;
-  position: absolute;
-  bottom: 20px;
-  font-size: 16px;
-  color: red;
-}
-
 /* tweeter logo */
 #logo {
-  font-family: "Bungee", cursive;
+  font-family: 'Bungee', cursive;
   font-size: 32px;
   align-self: flex-end;
 }

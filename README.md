@@ -25,3 +25,4 @@ This repository is the starter code for the project: It is build upon to practic
 - chance
 - md5
 - timeago
+- sass

@@ -1,0 +1,9 @@
+$color: #FFFFFF;
+$color-red: red;
+$font-size: 20px;
+$color-grey: #c0c7de;
+
+@mixin flex($flex-direction: row) {
+  display: flex;
+  flex-direction: $flex-direction;
+}

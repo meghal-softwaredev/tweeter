@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,15 +13,21 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   margin: 0;
   padding: 0;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ @mixin flex($flex-direction: row) {
+  display: flex;
+  flex-direction: $flex-direction;
+}
+
