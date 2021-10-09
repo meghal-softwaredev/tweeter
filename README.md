@@ -10,8 +10,6 @@ This repository is the starter code for the project: It is build upon to practic
 
 !["Screenshot of tablet view"](https://github.com/meghalshah210/tweeter/blob/master/docs/tablet-view.png)
 
-!["Screenshot of form toggle"](https://github.com/meghalshah210/tweeter/blob/master/docs/form-toggle.png)
-
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
